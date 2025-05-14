@@ -34,6 +34,7 @@
   property="og:image:alt"
   content="Offizone Coworking Space in Yaoundé"
 />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5c5e5e5e5e5e5e5e5e5e5e5e" crossorigin="anonymous" />
 
     <meta
       name="apple-mobile-web-app-status-bar-style"
@@ -220,6 +221,47 @@
           background: #555;
           color: white;
       }
+
+      /* Add social media buttons styles */
+      .social-media-buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+      }
+      .btn-social {
+        display: flex;
+        align-items: center;
+        padding: 10px 15px;
+        background-color: #f4f4f4;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        text-decoration: none;
+        color: #333;
+        font-size: 14px;
+        transition: background-color 0.3s;
+      }
+      .btn-social i {
+        margin-right: 8px;
+        font-size: 16px;
+      }
+      .btn-social:hover {
+        background-color: #e0e0e0;
+      }
+
+      /* Add styles for social icons */
+      .social-icons {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .social-icons a {
+        color: #333;
+        font-size: 20px;
+        transition: color 0.3s;
+      }
+      .social-icons a:hover {
+        color: #007bff;
+      }
     </style>
   </head>
 
@@ -367,6 +409,39 @@
                 <a class="mail" href="mailto:info@cirronyx.com">
                   <i class="fa-regular fa-envelope"></i>info@cirronyx.com
                 </a>
+                <div class="social-icons">
+                  <a
+                    href="https://www.facebook.com/offizonecoworking/"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <i class="fab fa-facebook"></i>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/offizonecoworking/"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="https://x.com/offizonecowork" target="_blank" rel="noopener">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/offizonecoworking/"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                  <a
+                    href="https://whatsapp.com/channel/0029VbBLqxaCHDysHr3u0815"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </div>
                 <span class="text">
                   Are you looking for a space where you can work effortlessly
                   with all amenities ready for you? Collaborate with us to find
@@ -833,7 +908,7 @@
                   <!-- <div class="row mt-5">
                     <div class="col-lg-4 col-sm-4 mt-4">
                       <div class="counter counter-light">
-                        <div class="counter-number">
+                                               <div class="counter-number">
                           <span
                             class="timer mb-0"
                             data-to="200"
@@ -1810,6 +1885,56 @@
                       <li>Sunday: Closed</li>
                     </ul>
                   </div>
+
+                <div class="social-icons" style="font-size: 24px; gap: 15px; display: flex; justify-content: flex-start;">
+                  <a
+                  href="https://www.facebook.com/offizonecoworking/"
+                  target="_blank"
+                  rel="noopener"
+                  style="margin-right: 15px;"
+                  >
+                  <i class="fab fa-facebook"></i>
+                  </a>
+                  <a
+                  href="https://www.instagram.com/offizonecoworking/"
+                  target="_blank"
+                  rel="noopener"
+                  style="margin-right: 15px;"
+                  >
+                  <i class="fab fa-instagram"></i>
+                  </a>
+                  <a 
+                  href="https://x.com/offizonecowork" 
+                  target="_blank" 
+                  rel="noopener"
+                  style="margin-right: 15px;"
+                  >
+                  <i class="fab fa-twitter"></i>
+                  </a>
+                  <a
+                  href="https://www.linkedin.com/company/offizonecoworking/"
+                  target="_blank"
+                  rel="noopener"
+                  style="margin-right: 15px;"
+                  >
+                  <i class="fab fa-linkedin"></i>
+                  </a>
+                  <a
+                  href="https://whatsapp.com/channel/0029VbBLqxaCHDysHr3u0815"
+                  target="_blank"
+                  rel="noopener"
+                  >
+                  <i class="fab fa-whatsapp"></i>
+                  </a>
+                  <a
+                  href="https://www.tiktok.com/@offizonecoworking"
+                  target="_blank"
+                  rel="noopener"
+                  style="margin-left: 15px;"
+                  >
+                  <i class="fab fa-tiktok"></i>
+                  </a>
+                </div>
                 </div>
               </div>
             </div>
