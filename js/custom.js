@@ -772,50 +772,8 @@ cursorLink.addEventListener('mouseleave', function() {
 })(jQuery);
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Check if the user has already agreed to the terms and accepted cookies
-    const hasAgreedToTerms = localStorage.getItem('agreedToTerms');
+    // Check if the user has already accepted cookies
     const hasAcceptedCookies = localStorage.getItem('acceptedCookies');
-
-    // Function to show Terms of Agreement/Privacy Policy popup
-    function showTermsPopup() {
-        Swal.fire({
-            title: 'Terms of Service & Privacy Policy',
-            html: `
-                <div style="text-align: left; font-size: 14px;">
-                    <h3>OffiZone Coworking Space Terms of Service</h3>
-                    <ul>
-                        <li><strong>Acceptance of Terms:</strong> By accessing or using the Offizone services, you agree to comply with these Terms of Service.</li>
-                        <li><strong>Membership Eligibility:</strong> Membership is available to individuals aged 18 and older. By signing up, you confirm that you meet this age requirement.</li>
-                        <li><strong>Membership Fees:</strong> All membership fees are due in advance and are non-refundable. Payment methods and billing cycles will be outlined during the registration process.</li>
-                        <li><strong>Use of Space:</strong> Members are expected to use the coworking space in a professional manner. Disruptive behavior or violation of community guidelines may result in termination of membership.</li>
-                        <li><strong>Access Hours:</strong> Access to the coworking space is available during specified hours. Members must adhere to these hours unless otherwise stated.</li>
-                        <li><strong>Intellectual Property:</strong> All content and materials provided by Offizone are the property of Offizone and may not be reproduced without permission.</li>
-                        <li><strong>Amendments:</strong> Offizone reserves the right to modify these Terms of Service at any time. Members will be notified of significant changes.</li>
-                    </ul>
-                    <h3>OffiZone Coworking Space Privacy Policy</h3>
-                    <ul>
-                        <li><strong>Security Measures:</strong> Offizone implements reasonable security measures to protect personal information from unauthorized access, disclosure, or misuse.</li>
-                        <li><strong>Cookies:</strong> Offizone uses cookies to enhance user experience on the website. Users can manage cookie preferences through their browser settings.</li>
-                        <li><strong>Data Sharing:</strong> Offizone does not sell or rent personal information to third parties. Information may be shared with service providers for operational purposes.</li>
-                        <li><strong>Data Rights:</strong> Members have the right to access, correct, or delete their personal information. Requests can be made through the contact information provided.</li>
-                        <li><strong>Contact:</strong> For questions or concerns regarding this Privacy Policy, members can contact Offizone at the provided email address or phone number.</li>
-                        <li><strong>Policy Updates:</strong> Offizone may update this Privacy Policy from time to time. Members will be notified of significant changes via email or through the website.</li>
-                    </ul>
-                </div>
-            `,
-            icon: 'info',
-            confirmButtonText: '<span style="color: black;">Agree</span>',
-            confirmButtonColor: '#FFD700', // Yellow button with black text
-            allowOutsideClick: false,
-            allowEscapeKey: false,
-            allowEnterKey: false
-        }).then(() => {
-            // Save agreement in local storage
-            localStorage.setItem('agreedToTerms', 'true');
-            // Show cookie consent notification after agreeing to terms
-            showCookieConsent();
-        });
-    }
 
     // Function to show Cookie Consent notification
     function showCookieConsent() {
@@ -856,10 +814,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Logic to show the appropriate popup/notification
-    if (!hasAgreedToTerms) {
-        showTermsPopup();
-    } else if (!hasAcceptedCookies) {
+    // Show Cookie Consent notification if not already accepted
+    if (!hasAcceptedCookies) {
         showCookieConsent();
     }
 });
