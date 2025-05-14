@@ -1,0 +1,49 @@
+# Offizone Coworking Space Website
+
+Welcome to the **Offizone Coworking Space Website** project! This repository contains the source code for the official website of Offizone, a coworking space located in Yaoundé, Cameroon. The website is designed to showcase the services, pricing, and amenities offered by Offizone, while also providing users with the ability to book workspaces and contact the team.
+
+---
+
+## Table of Contents
+
+1. [Project Overview](#project-overview)
+2. [Features](#features)
+3. [File Structure](#file-structure)
+4. [Technologies Used](#technologies-used)
+5. [How to Use](#how-to-use)
+6. [Key Functionalities](#key-functionalities)
+   - [Contact Form](#contact-form)
+   - [Booking Form](#booking-form)
+   - [Dynamic Pricing](#dynamic-pricing)
+   - [Google Maps Integration](#google-maps-integration)
+7. [Customization](#customization)
+8. [Deployment](#deployment)
+9. [Credits](#credits)
+
+---
+
+## Project Overview
+
+The Offizone website is a fully responsive, modern, and user-friendly platform designed to:
+
+- Showcase the coworking space's services, pricing, and amenities.
+- Allow users to book workspaces (e.g., coworking desks, private offices, conference rooms).
+- Provide contact options for inquiries or feedback.
+- Highlight the location of the coworking space using Google Maps.
+
+The website is built using HTML, CSS, JavaScript, and various third-party libraries for enhanced functionality.
+
+---
+
+## Features
+
+- **Responsive Design**: Optimized for desktop, tablet, and mobile devices.
+- **Dynamic Booking Form**: Users can select workspace types, duration, and see real-time pricing updates.
+- **Contact Form Integration**: Submissions are sent to a Google Sheet using Google Apps Script.
+- **Google Maps Integration**: Displays the location of Offizone with a "Get Directions" button.
+- **Interactive UI**: Includes animations, hover effects, and a carousel for testimonials.
+- **SEO Optimized**: Includes meta tags for search engines and social media sharing.
+
+---
+
+Rest to be added
