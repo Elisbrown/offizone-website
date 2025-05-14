@@ -10,7 +10,7 @@ Welcome to the **Offizone Coworking Space Website** project! This repository con
 2. [Features](#features)
 3. [File Structure](#file-structure)
 4. [Technologies Used](#technologies-used)
-5. [How to Use](#how-to-use)
+5. [Setup Instructions](#setup-instructions)
 6. [Key Functionalities](#key-functionalities)
    - [Contact Form](#contact-form)
    - [Booking Form](#booking-form)
@@ -18,7 +18,8 @@ Welcome to the **Offizone Coworking Space Website** project! This repository con
    - [Google Maps Integration](#google-maps-integration)
 7. [Customization](#customization)
 8. [Deployment](#deployment)
-9. [Credits](#credits)
+9. [SEO and Accessibility](#seo-and-accessibility)
+10. [Credits](#credits)
 
 ---
 
@@ -43,7 +44,163 @@ The website is built using HTML, CSS, JavaScript, and various third-party librar
 - **Google Maps Integration**: Displays the location of Offizone with a "Get Directions" button.
 - **Interactive UI**: Includes animations, hover effects, and a carousel for testimonials.
 - **SEO Optimized**: Includes meta tags for search engines and social media sharing.
+- **Cookie Consent Notification**: Ensures compliance with privacy regulations.
+- **Dynamic Pricing**: Automatically calculates pricing based on user input.
 
 ---
 
-Rest to be added
+## File Structure
+
+```
+OFFIZONE-website/
+├── css/
+│   ├── style.css
+│   ├── bootstrap/
+│   ├── font-awesome/
+│   ├── owl-carousel/
+│   ├── swiper/
+│   ├── magnific-popup/
+│   └── nice-select/
+├── images/
+│   ├── favicon/
+│   ├── Logo/
+│   ├── workspaces/
+│   ├── banner/
+│   └── icon-location.png
+├── js/
+│   ├── custom.js
+│   ├── jquery-3.7.1.min.js
+│   ├── bootstrap/
+│   ├── owl-carousel/
+│   ├── jarallax/
+│   ├── swiper/
+│   ├── shuffle/
+│   ├── magnific-popup/
+│   ├── counter/
+│   ├── gsap.min.js
+│   └── custom-select.js
+├── booking/
+│   └── index.html
+├── index.html
+└── ReadMe
+```
+
+---
+
+## Technologies Used
+
+- **HTML5**: For structuring the content.
+- **CSS3**: For styling and layout.
+- **JavaScript**: For interactivity and dynamic content.
+- **Bootstrap**: For responsive design and prebuilt components.
+- **jQuery**: For DOM manipulation and event handling.
+- **Google Apps Script**: For handling form submissions.
+- **SweetAlert2**: For user-friendly alerts and notifications.
+- **GSAP**: For animations.
+- **Swiper.js**: For carousels and sliders.
+- **Magnific Popup**: For modals and lightboxes.
+- **Google Maps API**: For embedding maps.
+
+---
+
+## Setup Instructions
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/your-repo/offizone-website.git
+   ```
+
+2. **Navigate to the Project Directory**:
+   ```bash
+   cd offizone-website
+   ```
+
+3. **Open the Project in a Code Editor**:
+   Use your preferred code editor (e.g., VS Code).
+
+4. **Run a Local Server**:
+   Use a local server like Live Server (VS Code extension) or Python's HTTP server:
+   ```bash
+   python -m http.server
+   ```
+
+5. **Access the Website**:
+   Open `http://localhost:8000` in your browser.
+
+---
+
+## Key Functionalities
+
+### Contact Form
+- Allows users to send inquiries or feedback.
+- Submissions are sent to a Google Sheet using Google Apps Script.
+
+### Booking Form
+- Enables users to book coworking spaces, private offices, or conference rooms.
+- Includes fields for name, email, phone, booking date, and duration.
+
+### Dynamic Pricing
+- Automatically calculates the total price based on the selected space and duration.
+- Displays real-time price updates.
+
+### Google Maps Integration
+- Embeds a map showing the location of Offizone.
+- Includes a "Get Directions" button linking to Google Maps.
+
+---
+
+## Customization
+
+1. **Update Content**:
+   - Modify text, images, and links in the `index.html` and `booking/index.html` files.
+
+2. **Change Styles**:
+   - Edit the `style.css` file to customize colors, fonts, and layouts.
+
+3. **Add New Features**:
+   - Use the `custom.js` file to add new JavaScript functionality.
+
+---
+
+## Deployment
+
+1. **Host on a Web Server**:
+   - Use platforms like Netlify, Vercel, or GitHub Pages.
+
+2. **Configure Domain**:
+   - Point your custom domain to the hosting platform.
+
+3. **Optimize for Production**:
+   - Minify CSS and JavaScript files.
+   - Use a CDN for static assets.
+
+---
+
+## SEO and Accessibility
+
+- **SEO**:
+  - Includes meta tags for title, description, and keywords.
+  - Structured data using JSON-LD for better search engine visibility.
+
+- **Accessibility**:
+  - Ensures proper contrast ratios.
+  - Adds `aria-labels` and `alt` attributes for screen readers.
+
+---
+
+## Credits
+
+- **Design and Development**: Cirronyx
+- **Libraries and Frameworks**:
+  - Bootstrap
+  - jQuery
+  - SweetAlert2
+  - GSAP
+  - Swiper.js
+  - Magnific Popup
+- **Icons**: Font Awesome
+- **Hosting**: [Your Hosting Provider]
+
+---
+
+For any questions or support, please contact [info@cirronyx.com](mailto:info@cirronyx.com).
