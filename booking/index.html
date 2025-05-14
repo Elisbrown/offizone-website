@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en_CM">
+<html lang="en-CM"> <!-- Corrected lang attribute -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -171,8 +171,10 @@
     })(window, document, "clarity", "script", "rj7z9t0sef");
 </script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Syne:wght@400..800&display=swap"
+      as="style"
+      onload="this.rel='stylesheet'"
     />
 
     <link rel="stylesheet" href="../css/font-awesome/all.min.css" />
@@ -192,6 +194,40 @@
         color: #28a745;
         margin-top: 5px;
       }
+          #cookie-consent {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        background: #333;
+        color: white;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 9999;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+    }
+    #cookie-consent a {
+        color: #FFD700;
+        text-decoration: underline;
+    }
+    #cookie-consent button {
+        border: none;
+        padding: 8px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    #cookie-consent button#accept-cookies {
+        background: #FFD700;
+        color: black;
+    }
+    #cookie-consent button#close-cookies {
+        background: #555;
+        color: white;
+    }
     </style>
   </head>
   <body>
@@ -205,6 +241,7 @@
               src="../images/Logo/white/logo-main.png"
               alt="Offizone Logo"
               width="250"
+              height="100"
             />
           </a>
         </div>

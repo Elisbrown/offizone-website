@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en_CM">
+<html lang="en-CM">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -173,10 +173,12 @@
     })(window, document, "clarity", "script", "rj7z9t0sef");
 </script>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&display=swap" as="style" onload="this.rel='stylesheet'">
+    <style>
+      /* Critical CSS for above-the-fold content */
+      .main-banner { display: flex; align-items: center; justify-content: center; }
+      .banner-image img { max-width: 100%; height: auto; }
+    </style>
 
     <link rel="stylesheet" href="/css/font-awesome/all.min.css" />
     <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css" />
@@ -187,6 +189,42 @@
     <link rel="stylesheet" href="/css/nice-select/nice-select.css" />
 
     <link rel="stylesheet" href="/css/style.css" />
+    <style>
+            #cookie-consent {
+          position: fixed;
+          bottom: 20px;
+          left: 20px;
+          right: 20px;
+          background: #333;
+          color: white;
+          padding: 15px;
+          border-radius: 8px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          z-index: 9999;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 14px;
+      }
+      #cookie-consent a {
+          color: #FFD700;
+          text-decoration: underline;
+      }
+      #cookie-consent button {
+          border: none;
+          padding: 8px 12px;
+          border-radius: 4px;
+          cursor: pointer;
+      }
+      #cookie-consent button#accept-cookies {
+          background: #FFD700;
+          color: black;
+      }
+      #cookie-consent button#close-cookies {
+          background: #555;
+          color: white;
+      }
+    </style>
   </head>
 
   <body>
@@ -421,17 +459,23 @@
                     <img
                       class="img-fluid main-img"
                       src="images/workspaces/Coworking/Landing.png"
-                      alt=""
+                      alt="Coworking Space in Yaoundé"
+                      width="800"
+                      height="600"
                     />
                     <img
                       class="img-fluid image-border"
                       src="images/banner/banner-02/image-border.png"
-                      alt=""
+                      alt="Image Border"
+                      width="800"
+                      height="600"
                     />
                     <img
                       class="img-fluid img-shape"
                       src="images/banner/banner-02/image-bg.png"
-                      alt=""
+                      alt="Image Background"
+                      width="800"
+                      height="600"
                     />
                   </div>
                 </div>
@@ -1639,9 +1683,8 @@
             <iframe
               class="map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d995.2224355253206!2d11.4865847!3d3.8338334999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x108bcf811a034cbb%3A0xa09b278cfdce461!2sOFFIZONE%20Coworking%20Space!5e0!3m2!1sen!2scm!4v1747051056974!5m2!1sen!2scm"
-              style="border: 0; width: 100%"
-              allowfullscreen=""
-              allowfullscreen=""
+              title="Google Maps Location of Offizone"
+              style="border: 0; width: 100%; height: 400px;"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
