@@ -1564,6 +1564,7 @@
                             <a
                               href="https://offizone.cm/booking"
                               target="_blank"
+                              rel="noopener"
                               >https://offizone.cm/booking</a
                             >. Our team will review your request promptly and
                             arrange payment before confirming your booking.
@@ -1597,6 +1598,7 @@
                             <a
                               href="https://maps.app.goo.gl/UTU8P895ZXmdhrpS9"
                               target="_blank"
+                              rel="noopener"
                               >Google Maps Link</a
                             >.
                           </div>
@@ -1676,6 +1678,7 @@
                 href="https://maps.google.com/maps/dir//OFFIZONE+Coworking+Space+Rond+Point+Express+Entr%C3%A9e+Saint+Marc+Yaound%C3%A9/@3.8337833,11.4866124,19z/data=!4m5!4m4!1m0!1m2!1m1!1s0x108bcf811a034cbb:0xa09b278cfdce461"
                 target="_blank"
                 class="btn btn-effect"
+                rel="noopener"
               >
                 <span>Get Directions</span>
               </a>
@@ -1994,7 +1997,17 @@ if (contactForm) { // Check if the form exists on the page
     </script>
     <!-- Add SweetAlert CDN -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
- <script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XM8TY6FJDM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XM8TY6FJDM');
+</script>
+<script>
                 var url = 'https://wati-integration-prod-service.clare.ai/v2/watiWidget.js?26667';
                 var s = document.createElement('script');
                 s.type = 'text/javascript';
