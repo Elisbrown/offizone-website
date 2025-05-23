@@ -484,6 +484,21 @@
                           />
                         </div>
                       </div>
+                      <!-- <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="coupon">Coupon Code(Optional)</label>
+                          <input
+                            type="text"
+                            id="coupon"
+                            name="coupon"
+                            class="form-control"
+                            defaultValue="OFFIZONE10"
+                            placeholder="Enter coupon code"
+                            onchange="validateCoupon()"
+                          />
+                          <div id="coupon-feedback" class="price-feedback"></div>
+                        </div> -->
+                      </div>
                       <div class="col-lg-12">
                         <div class="form-group">
                           <label for="payment">Payment Instructions</label>
@@ -599,6 +614,194 @@
           document.getElementById("price-feedback").textContent = "";
         }
       }
+
+  const coupons = [
+    {
+      code: "KMUNDI20",
+      discount: 20, // percentage discount
+      startDate: new Date("2025-05-01"),
+      endDate: new Date("2025-05-31")
+    },
+    {
+      code: "KABREL15",
+      discount: 15, // percentage discount
+      startDate: new Date("2025-05-01"),
+      endDate: new Date("2025-06-30")
+    },
+    {
+      code: "BESTLEY15",
+      discount: 15,
+      startDate: new Date("2025-05-01"),
+      endDate: new Date("2025-06-30")
+    },
+    {
+      code: "ZACH15",
+      discount: 15,
+      startDate: new Date("2025-05-01"),
+      endDate: new Date("2025-06-30")
+    },
+    {
+      code: "BANLA15",
+      discount: 15,
+      startDate: new Date("2025-05-01"),
+      endDate: new Date("2025-06-30")
+    },
+    {
+      code: "BROWN15",
+      discount: 15,
+      startDate: new Date("2025-05-01"),
+      endDate: new Date("2025-06-30")
+    },
+    {
+      code: "JORDAN15",
+      discount: 15,
+      startDate: new Date("2025-05-01"),
+      endDate: new Date("2025-06-30")
+    },
+    {
+      code: "GABRIEL15",
+      discount: 15,
+      startDate: new Date("2025-05-01"),
+      endDate: new Date("2025-06-30")
+    },
+    {
+      code: "DKSEMA15",
+      discount: 15,
+      startDate: new Date("2025-05-01"),
+      endDate: new Date("2025-06-30")
+    },
+    {
+      code: "MIYAACADEMY15",
+      discount: 15,
+      startDate: new Date("2025-05-01"),
+      endDate: new Date("2025-06-30")
+    },
+    {
+      code: "BRAVELIONS15",
+      discount: 15,
+      startDate: new Date("2025-05-01"),
+      endDate: new Date("2025-06-30")
+    },
+    {
+      code: "CLIFE15",
+      discount: 15,
+      startDate: new Date("2025-05-01"),
+      endDate: new Date("2025-06-30")
+    },
+    {
+      code: "YIBS15",
+      discount: 15,
+      startDate: new Date("2025-05-01"),
+      endDate: new Date("2025-06-30")
+    },
+    {
+      code: "BANSA15",
+      discount: 15,
+      startDate: new Date("2025-05-01"),
+      endDate: new Date("2025-06-30")
+    },
+    {
+      code: "FURT15",
+      discount: 15,
+      startDate: new Date("2025-05-01"),
+      endDate: new Date("2025-06-30")
+    },
+    {
+      code: "RACINE15",
+      discount: 15,
+      startDate: new Date("2025-05-01"),
+      endDate: new Date("2025-06-30")
+    },
+    {
+      code: "BORIS15",
+      discount: 15,
+      startDate: new Date("2025-05-01"),
+      endDate: new Date("2025-06-30")
+    },
+    {
+      code: "YARO15",
+      discount: 15,
+      startDate: new Date("2025-05-01"),
+      endDate: new Date("2025-06-30")
+    },
+    {
+      code: "GODWILL15",
+      discount: 15,
+      startDate: new Date("2025-05-01"),
+      endDate: new Date("2025-06-30")
+    },
+    {
+      code: "OFFIZONE10",
+      discount: 10,
+      startDate: new Date("2025-05-01"),
+      endDate: new Date("2025-06-30")
+    },
+    {
+      code: "MOLO15",
+      discount: 15,
+      startDate: new Date("2025-05-01"),
+      endDate: new Date("2025-06-30")
+    },
+    {
+      code: "RAPHAEL15",
+      discount: 15,
+      startDate: new Date("2025-05-01"),
+      endDate: new Date("2025-06-30")
+    },
+    {
+      code: "TRACEMBOA15",
+      discount: 15,
+      startDate: new Date("2025-05-01"),
+      endDate: new Date("2025-06-30")
+    },
+ 
+    {
+      code: "TOURE15",
+      discount: 15,
+      startDate: new Date("2025-05-01"),
+      endDate: new Date("2025-06-30")
+    }
+
+    
+  ];
+
+  function validateCoupon() {
+    const couponInput = document.getElementById("coupon").value.trim();
+    const couponFeedback = document.getElementById("coupon-feedback");
+    const durationType = document.getElementById("duration-type").value;
+
+    if (durationType !== "monthly") {
+      couponFeedback.textContent = "Coupons can only be applied to monthly bookings.";
+      return;
+    }
+
+    const coupon = coupons.find(c => c.code === couponInput);
+
+    if (!coupon) {
+      couponFeedback.textContent = "Invalid coupon code.";
+      return;
+    }
+
+    const now = new Date();
+    if (now < coupon.startDate || now > coupon.endDate) {
+      couponFeedback.textContent = "This coupon has expired or is not yet valid.";
+      return;
+    }
+
+    const months = parseInt(document.getElementById("months").value) || 1;
+    const space = document.getElementById("space").value;
+
+    if (space && pricing[space]) {
+      const originalPrice = pricing[space].monthly * months;
+      const discount = (originalPrice * coupon.discount) / 100;
+      const discountedPrice = originalPrice - discount;
+
+      document.getElementById("price").value = discountedPrice.toLocaleString();
+      couponFeedback.textContent = `Coupon applied! You saved ${discount.toLocaleString()} FCFA.`;
+    } else {
+      couponFeedback.textContent = "Please select a valid space and duration.";
+    }
+  }
 
 
 // --- Add this part for submission ---
