@@ -18,7 +18,7 @@
     <meta name="apple-mobile-web-app-title" content="Offizone Coworking Space" />
     <meta name="application-name" content="Offizone Coworking Space" />
     <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="../images/favicon/mstile-144x144.png" />
+    <meta name="msapplication-TileImage" content="../images/favicon/mstile-144x144.png" /> 
     <meta name="msapplication-config" content="../images/favicon/browserconfig.xml" />
     <meta name="msapplication-navbutton-color" content="#ffffff" />
     <meta name="msapplication-starturl" content="../index.html" />
@@ -484,7 +484,7 @@
                           />
                         </div>
                       </div>
-                      <!-- <div class="col-md-6">
+                      <div class="col-md-6">
                         <div class="form-group">
                           <label for="coupon">Coupon Code(Optional)</label>
                           <input
@@ -492,12 +492,11 @@
                             id="coupon"
                             name="coupon"
                             class="form-control"
-                            defaultValue="OFFIZONE10"
                             placeholder="Enter coupon code"
                             onchange="validateCoupon()"
                           />
                           <div id="coupon-feedback" class="price-feedback"></div>
-                        </div> -->
+                        </div>
                       </div>
                       <div class="col-lg-12">
                         <div class="form-group">
@@ -760,6 +759,24 @@
       discount: 15,
       startDate: new Date("2025-05-01"),
       endDate: new Date("2025-06-30")
+    },
+    {
+      code: "MORELLE20",
+      discount: 20,
+      startDate: new Date("2025-05-01"),
+      endDate: new Date("2025-06-30")
+    },
+    {
+      code: "MORELLE15",
+      discount: 15,
+      startDate: new Date("2025-05-01"),
+      endDate: new Date("2025-06-30")
+    },
+    {
+      code: "MORELLE10",
+      discount: 10,
+      startDate: new Date("2025-05-01"),
+      endDate: new Date("2025-06-30")
     }
 
     
@@ -806,7 +823,7 @@
 
 // --- Add this part for submission ---
 const bookingForm = document.getElementById('bookingForm');
-const appsScriptURL = 'https://script.google.com/macros/s/AKfycby6EiHfnsVQNx3EquUqBi0ryud8x4tU_PzUBdsbJezNalu5erZNtYeoMljDH_YUxfSE/exec'; // <<< PASTE YOUR DEPLOYED WEB APP URL HERE
+const appsScriptURL = 'https://script.google.com/macros/s/AKfycbxkpZ_zJSNfAoQCrsSi-R-u74hANGb7HkYViJWg1bj3tbPOLKiLPlscdeuSRwFR7neh/exec'; // <<< PASTE YOUR DEPLOYED WEB APP URL HERE
 
 bookingForm.addEventListener('submit', function(event) {
     event.preventDefault(); // Stop the browser from submitting the form normally

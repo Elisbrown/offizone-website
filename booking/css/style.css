@@ -3829,11 +3829,12 @@ form .form-control {
   position: relative;
   font-size: 18px;
   line-height: normal;
-  border-radius: 0px;
+  border-radius: 5px;
   padding: 15px 0px;
   border: none;
   background: transparent;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
   color: #8b87ab;
   margin-bottom: 30px;
 }
