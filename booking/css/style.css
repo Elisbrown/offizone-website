@@ -5401,12 +5401,12 @@ form.form-dark .form-control:focus {
 }
 
 .workspaces-wrapper.workspaces-style3 .workspaces-inner .spaces-info-bottom {
-  text-align: center;
+  text-align: left;
   margin-top: 25px;
 }
 
 .workspaces-wrapper.workspaces-style3 .workspaces-inner .spaces-info-bottom .spaces-list li {
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .workspaces-wrapper.workspaces-style3 .workspaces-inner:hover {
